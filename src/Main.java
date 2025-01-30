@@ -3,8 +3,8 @@ public class Main {
 
 //Домашнее задание  № 3. Переменные
         // Задача №1
-        byte shoolbag = 125;
-        System.out.println(shoolbag);
+        byte schoolBag = 125;
+        System.out.println(schoolBag);
         short basket = 30000;
         System.out.println(basket);
         int box = 483500;
@@ -13,8 +13,8 @@ public class Main {
         System.out.println(pantry);
         double kitchen = 10.5;
         System.out.println(kitchen);
-        float apartmens = (float) 38.5;
-        System.out.println(apartmens);
+        float appartmens = (float) 38.5;
+        System.out.println(appartmens);
 
         //Задача N2
         byte a = 67;
