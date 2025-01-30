@@ -13,7 +13,7 @@ public class Main {
         System.out.println(pantry);
         double kitchen = 10.5;
         System.out.println(kitchen);
-        float apartmens = (float) 38.5F;
+        float apartmens = (float) 38.5;
         System.out.println(apartmens);
 
         //Задача N2
@@ -52,12 +52,12 @@ public class Main {
         short bottle2 = (short) (bottle / 2);
         System.out.println("Бутылок производится за 1 минуту" + bottle2);
         short bottle3 = (short) (bottle2 * 20);
-        System.out.println("За 20 минут машина произвела" + bottle3 +  " штук бутылок");
+        System.out.println("За 20 минут машина произвела" + bottle3 + " штук бутылок");
         short minute1day = 24 * 60;
         System.out.println("В одном дне" + minute1day + "минут");
-        short bottle1Day =(short) (bottle2 * minute1day);
+        short bottle1Day = (short) (bottle2 * minute1day);
         System.out.println("За 1 день машина произвела" + bottle1Day + "штук бутылок");
-        short minute3day = (24*3) * 60;
+        short minute3day = (24 * 3) * 60;
         System.out.println("В 3-ёх днях" + minute3day + "минут");
         short bottle3Day = (short) (bottle2 * minute3day);
         System.out.println("За 3 дня машина произвела" + bottle3Day + "штук бутылок");
@@ -78,10 +78,10 @@ public class Main {
         short allClasses = (short) (allPaint / classPaint);
         System.out.println("В школе всего " + allClasses + "классов");
         short allWhitePaint = (short) (whitePaint * allClasses);
-        System.out.println("Необходимо" +  allWhitePaint + "банок белой краски для ремонта школы");
+        System.out.println("Необходимо" + allWhitePaint + "банок белой краски для ремонта школы");
         short allDrownPaint = (short) (drownPaint * allClasses);
         System.out.println("Необходимо" + allDrownPaint + "банок коричневной краски для ремонта школы");
-        System.out.println("В школе, где" + allClasses +  "классов, нужно" + allWhitePaint + "банок белой краски и" + allDrownPaint + "банок кричневой краски");
+        System.out.println("В школе, где" + allClasses + "классов, нужно" + allWhitePaint + "банок белой краски и" + allDrownPaint + "банок кричневой краски");
 
         //Задача 6
         short banana = 5;
@@ -106,41 +106,41 @@ public class Main {
         System.out.println("Вес завтрака составляет" + breakfast + " кг ");
 
         //Задача №7
-        short veight = 7;
-        System.out.println("Спортсмену необходимо сбросить" + veight + " кг ");
+        short weight = 7;
+        System.out.println("Спортсмену необходимо сбросить" + weight + " кг ");
         short weightLossDiet = 250;
         System.out.println("Рацион для потери" + weightLossDiet + " грамм веса в день ");
         short weightLossDiet2 = 500;
         System.out.println("Рацион для потери" + weightLossDiet2 + " грамм веса в день ");
-        short veightGr = 7 * 1000;
-        System.out.println("Спортмену необходимо сбросить" + veightGr + " грамм!");
-        short dayDiet1 =(short) (veightGr / weightLossDiet);
-        System.out.println("Уйдет" + dayDiet1 +  "дней на похудение если спортсмен будет терять по 250 грамм веса в день");
-        short daydiet2 = (short) (veightGr / weightLossDiet2);
+        short weightGr = 7 * 1000;
+        System.out.println("Спортмену необходимо сбросить" + weightGr + " грамм!");
+        short dayDiet1 = (short) (weightGr / weightLossDiet);
+        System.out.println("Уйдет" + dayDiet1 + "дней на похудение если спортсмен будет терять по 250 грамм веса в день");
+        short daydiet2 = (short) (weightGr / weightLossDiet2);
         System.out.println(" У спортсмена уйдёт" + daydiet2 + "дней на похудение если спортсмен будет терять по 500 грамм веса в день");
-        double averageWeight =(weightLossDiet + weightLossDiet2) / 2;
+        double averageWeight = (double) (weightLossDiet + weightLossDiet2) / 2;
         System.out.println("Средняя потеря веса в день при соблюдении диеты составляет" + averageWeight + " гр ");
-        double avarageLoss =(float) veightGr / averageWeight;
+        double avarageLoss = (float) weightGr / averageWeight;
         System.out.println("В среднем для похудения потребуется" + avarageLoss + " дней ");
 
         //Задача №8
         int wageMaria = 67_760;
-        System.out.println("Зарплата Марии" + wageMaria +  "рублей в месяц");
+        System.out.println("Зарплата Марии" + wageMaria + "рублей в месяц");
         int wageDenis = 83_690;
         System.out.println("Зарплата Дениса" + wageDenis + " рублей в месяц");
         int wageKristina = 76_230;
         System.out.println("Зарплата Кристины" + wageKristina + " рублей в месяц");
         int indexingMaria = (int) (wageMaria * 0.1f);
         System.out.println("Надбака к зарплате Марии с учетом индексации составляет" + indexingMaria + "рублей в месяц");
-        int allWageMaria = (int) (wageMaria + indexingMaria);
+        int allWageMaria = wageMaria + indexingMaria;
         System.out.println("Общая сумма зарплаты Марии после индексации составляет" + allWageMaria + "рублей в месяц");
         int indexngDenis = (int) (wageDenis * 0.1f);
         System.out.println("Надбавка к зарплате Дениса с учетом индексации составляет" + indexngDenis + " рублей в месяц");
-        int allWageDenis = (int) (wageDenis + indexngDenis);
+        int allWageDenis = wageDenis + indexngDenis;
         System.out.println("Общая сумма зарплаты Дениса с учетом индексации составляет" + allWageDenis + " рублей в месяц");
         int indexingKristina = (int) (wageKristina * 0.1f);
         System.out.println("Надбавка к зарплате Кристины с учетом индексации составялет" + indexingKristina + " рублей в месяц ");
-        int allWageKristina = (int) (wageKristina + indexingKristina);
+        int allWageKristina = (int) (wageKristina * 0.1f);
         System.out.println("Общая сумма зарплаты Кристины с учетом индексации составляет" + allWageKristina + " рублей в месяц ");
 
         int ageIncomeMaria = wageMaria * 12;
@@ -163,47 +163,9 @@ public class Main {
         System.out.println("Годовой доход Дениса вырос на " + differencenEarningsDenis + " рублей ");
         int differencenEarningsKristina = ageAllIncomeKristina - ageIncomeKristina;
         System.out.println("Годовой доход Кристины вырос на " + differencenEarningsKristina + " рублей ");
-        System.out.println("Маша теперь получает" + allWageMaria +  " рублей в месяц. Годовой доход вырос на" + differencenEarningsMaria + "рублей");
+        System.out.println("Маша теперь получает" + allWageMaria + " рублей в месяц. Годовой доход вырос на" + differencenEarningsMaria + "рублей");
         System.out.println("Денис теперь получет" + allWageDenis + " рублей в месяц. Годовой доход вырос на" + differencenEarningsDenis + "рублей");
         System.out.println("Кристина теперь получает" + allWageKristina + " рублей в месяц. Годовой доход вырос на" + differencenEarningsDenis + "рублей");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
