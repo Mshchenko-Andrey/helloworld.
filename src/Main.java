@@ -4,24 +4,22 @@ public class Main {
 //Домашнее задание  № 4. Условный оператор
         // Задача №1
 
-        int age = 18;
+        int age = 8;
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age + " То он совершеннолетний");
-        }
-        int age2 = 16;
-        if (age2 < 18) {
-            System.out.println("Если возрасть человека равен " + age2 + " он не достиг совершеннолетия, нужно немного подождать");
+        } else {
+            System.out.println("Возраст совершеннолетия ещё не наступил, нужно немного подождать");
         }
 
+
         //Задача №2
-        int temperature = 3;
+        int temperature = 6;
         if (temperature < 5) {
             System.out.println("На улице " + temperature + " градуса, нужно надеть шапку");
+        } else {
+            System.out.println("На улице " + temperature + " градусов можно идти без шапки");
         }
-        int temperature2 = 7;
-        if (temperature2 > 5) {
-            System.out.println("На улице " + temperature2 + " градусов, можно идти без шапки");
-        }
+
 
         //Задача №3
         int speed = 60;
@@ -32,18 +30,18 @@ public class Main {
         }
 
         //Задача №4
-        int age4 = 6;
-        if (age4 >= 2 && age4 <= 6) {
-            System.out.println("Если возраст человека равен " + age4 + " то ему нужно ходить в детский сад");
+        int agePeople = 25;
+        if (agePeople >= 2 && agePeople <= 6) {
+            System.out.println("Если возраст человека равен " + agePeople + " то ему нужно ходить в детский сад");
         }
-        if (age4 >= 7 && age4 <= 17) {
-            System.out.println("Если возраст человека равен " + age4 + " то ему нужно ходить в школу");
+        if (agePeople >= 7 && agePeople <= 17) {
+            System.out.println("Если возраст человека равен " + agePeople + " то ему нужно ходить в школу");
         }
-        if (age4 >= 18 && age4 <= 24) {
-            System.out.println("Если возраст человека равен " + age4 + " то ему нужно ходить в университет");
+        if (agePeople >= 18 && agePeople <= 24) {
+            System.out.println("Если возраст человека равен " + agePeople + " то ему нужно ходить в университет");
         }
-        if (age4 > 24) {
-            System.out.println("Если возраст человека равен " + age4 + "то ему нужно ходить на работу");
+        if (agePeople > 24) {
+            System.out.println("Если возраст человека равен " + agePeople + " то ему нужно ходить на работу");
         }
 
         //Задача №5
@@ -78,9 +76,11 @@ public class Main {
 
         }
     }
-
-
 }
+
+
+
+
 
 
 
