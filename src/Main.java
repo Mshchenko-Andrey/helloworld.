@@ -50,51 +50,39 @@ public class Main {
             System.out.println("Если возраст ребёнка равен " + ageChild + " то ему нельзя кататься на аттракционах");
         }
         if (ageChild > 5 && ageChild < 14) {
-            System.out.println("Если возраст ребёнка равен " + ageChild + " можно кататься на аттрационе в совпровождении взросложного");
+            System.out.println("Если возраст ребёнка равен " + ageChild + " можно кататься на аттрационе в сопровождении взросложного");
         }
         if (ageChild > 14) {
             System.out.println("Если возраст ребёнка старше " + ageChild + " можно кататься на аттрационе без сопровождения взрослого");
         }
         // Задача №6
-        int passengerSeat = 103;
-        if (passengerSeat <= 102) {
-            System.out.println("В вагоне есть сидячие или стоячие места ");
-        } else
-            System.out.println("Вагон полностью забит");
+        int full = 102;
+        int seating = 60;
+        int count = 50;
+        if (count > 102) {
+            System.out.println("Свободных мест нет");
+
+        }
+        if (count < full && count > seating) {
+            System.out.println("Свободно " + (full - count) + " стоячих мест, сидячих мест нет");
+        } else {
+            System.out.println("Свободно " + (seating - count) + " сидячих мест");
+        }
+
 
         //Задача №7
 
         int one = 10;
         int two = 3;
         int three = 15;
+
         if (one >= two && one >= three) {
             System.out.println("Наибольшее число " + one);
         } else if (two >= one && two >= three) {
             System.out.println("Наибольшее число " + two);
         } else {
             System.out.println("Наибольшее число " + three);
-
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
