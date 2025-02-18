@@ -22,10 +22,9 @@ public class Main {
             start = start + 1;
         }
         System.out.println();
-        int start2 = 11;
-        while (start2 > 1) {
-            start2 = start2 - 1;
-            System.out.print(start2 + " ");
+        for (int i = 10; i >= 1; i = i - 1 ) {
+
+            System.out.print(i + " ");
         }
         System.out.println();
 
@@ -76,24 +75,30 @@ public class Main {
 
         //Задача №6
         int initialAmount3 = 15_000;
-        double monthlyInterestRate3 =  0.07;
+        double monthlyInterestRate3 = 0.07;
         int years3 = 9;
         int months3 = years3 * 12;
 
-        for (int month3 = 1; month3 <= months3; month3++) {
+        for (
+                int month3 = 1;
+                month3 <= months3; month3++) {
             initialAmount3 *= (1 + monthlyInterestRate3);
             if (month3 % 6 == 0) {
                 System.out.println("Месяц " + month3 + " сумма накоплений равна " + initialAmount3 + " рублей");
             }
         }
+
         //Задача №7
         int firstFriday = 3;
         int daysInMonth = 31;
-        for (int day = 1; day <= daysInMonth; day++) {
+        for (
+                int day = 1;
+                day <= daysInMonth; day++) {
             if ((day - firstFriday) % 7 == 0) {
                 System.out.println("Сегодня пятница " + day + "-е число. Необходимо подготовить отчет.");
             }
         }
+
         //Задача №8
         int currentYear = 2023;
         int cometFlyPeriod = 79;
@@ -104,7 +109,9 @@ public class Main {
             firstCometYear += cometFlyPeriod;
         }
 
-        for (int year4 = firstCometYear; year4 <= endYear; year4 += cometFlyPeriod) {
+        for (
+                int year4 = firstCometYear;
+                year4 <= endYear; year4 += cometFlyPeriod) {
             if (year4 >= startYear) {
                 System.out.println(year4);
             }
