@@ -39,7 +39,7 @@ public class Main {
 
         System.out.println("Задача №3");
 
-        int[] expenses2 = {300_442, 730_865, 130_342, 600_523, 500_721}; // Пример данных
+        int[] expenses2 = {300_442, 730_865, 130_342, 600_523, 500_721};
 
         // Считаем сумму всех трат
         int totalExpenses2 = 0;
@@ -48,9 +48,8 @@ public class Main {
         }
 
         // Вычисляем среднее значение трат за месяц
-        double averageExpenses = (double) totalExpenses2 / expenses.length;
+        double averageExpenses = (double) totalExpenses2 / expenses2.length;
 
-        // Выводим результат в консоль
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей.\n", averageExpenses);
 
         System.out.println("Задача №4");
