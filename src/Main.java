@@ -3,61 +3,30 @@ import java.util.Arrays;
 
 public class Main {
 
-    //Домашнее Задание №11. Методы
-
+    //Домашнее Задание №12. Объекты и классы
     public static void main(String[] args) {
-        System.out.println("Задача №1");
-        leapYearCheck(2020);
 
-        System.out.println("Задача №2");
-        suggestAppVersion(0, 2014);
-
-        System.out.println("Задача №3");
-        int deliveryDistance = 95;
-        int deliveryDays = calculateDeliveryDays(deliveryDistance);
+        Author author1 = new Author("Джоан", "Роулинг");
+        Author author2 = new Author("Джон", "Толкин");
 
 
-        if (deliveryDays == -1) {
-            System.out.println("Доставка невозможна.");
-        } else {
-            System.out.println("Потребуется дней: " + deliveryDays);
-        }
-    }
-    public static void leapYearCheck(int year) {
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            System.out.println(year + " год — високосный год");
-        } else {
-            System.out.println(year + " год — невисокосный год");
-        }
-    }
+        Book book1 = new Book("Гарри Поттер", author1, 1996);
+        Book book2 = new Book("Хоббит", author2, 1937);
 
-    public static void suggestAppVersion(int osType, int yearDeviceClient) {
-        int currentYear = LocalDate.now().getYear();
-        String osName;
-        if (osType == 0) {
-            osName = "iOS";
-        } else {
-            osName = "Android";
-        }
 
-        if (yearDeviceClient < currentYear) {
-            System.out.println("Установите облегченную версию приложения для " + osName + " по ссылке");
-        } else {
-            System.out.println("Установите обычную версию приложения для " + osName + " по ссылке");
-        }
-    }
-    public static int calculateDeliveryDays(int deliveryDistance) {
-        if (deliveryDistance <= 0) {
-            return -1;
-        } else if (deliveryDistance <= 20) {
-            return 1;
-        } else if (deliveryDistance <= 60) {
-            return 2;
-        } else if (deliveryDistance <= 100) {
-            return 3;
-        } else {
-            return -1;
-        }
+        System.out.println("Книга 1: " + book1.getTitle() + ", Автор: " +
+                book1.getAuthor().getFirstName() + " " +
+                book1.getAuthor().getLastName() + ", Год: " +
+                book1.getYear());
+
+        System.out.println("Книга 2: " + book2.getTitle() + ", Автор: " +
+                book2.getAuthor().getFirstName() + " " +
+                book2.getAuthor().getLastName() + ", Год: " +
+                book2.getYear());
+
+
+        book1.setYear(1997);
+        System.out.println("Обновленный год публикации книги 1: " + book1.getYear());
     }
 }
 
