@@ -1,56 +1,88 @@
+
 public class Main {
+    private static Employee[] employees = new Employee[10];
 
-    //Домашнее Задание №13. Методы объектов
     public static void main(String[] args) {
-        // Создаем авторов
-        Author author1 = new Author("Джоан", "Роулинг");
-        Author author2 = new Author("Джон", "Толкин");
 
-        // Создаем книги
-        Book book1 = new Book("Гарри Поттер", author1, 1996);
-        Book book2 = new Book("Хоббит", author2, 1937);
-
-        // Выводим информацию о книгах
-        System.out.println("Книга 1: " + book1.getTitle() + ", Автор: " +
-                book1.getAuthor().getFirstName() + " " +
-                book1.getAuthor().getLastName() + ", Год: " +
-                book1.getYear());
-
-        System.out.println("Книга 2: " + book2.getTitle() + ", Автор: " +
-                book2.getAuthor().getFirstName() + " " +
-                book2.getAuthor().getLastName() + ", Год: " +
-                book2.getYear());
-
-        // Изменяем год публикации первой книги
-        book1.setYear(1873);
-        System.out.println("Обновленный год публикации книги 1: " + book1.getYear());
-
-        System.out.println(book1.toString());
-        System.out.println(book2.toString());
-
-        System.out.println("book1 equals book2: " + book1.equals(book2));
-
-        System.out.println("HashCode book1: " + book1.hashCode());
-        System.out.println("HashCode book2: " + book2.hashCode());
+        employees[0] = new Employee("Кузнецов Станислав Константинович", 1, 75000);
+        employees[1] = new Employee("Махалов Пётр Игоревич", 2, 80000);
+        employees[2] = new Employee("Каноненко Дмитрий Андреевич", 3, 90000);
 
 
+
+        printAllEmployees();
+        System.out.println("Сумма затрат на ЗП: " + calculateTotalSalary());
+        System.out.println("Сотрудник с минимальной ЗП: " + findEmployeeWithMinSalary());
+        System.out.println("Сотрудник с максимальной ЗП: " + findEmployeeWithMaxSalary());
+        System.out.println("Средняя ЗП: " + calculateAverageSalary());
+        printAllFullNames();
+    }
+
+
+    public static void printAllEmployees() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee);
+            }
+        }
+    }
+
+
+    public static double calculateTotalSalary() {
+        double total = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                total += employee.getSalary();
+            }
+        }
+        return total;
+    }
+
+
+    public static Employee findEmployeeWithMinSalary() {
+        Employee minSalaryEmployee = null;
+        double minSalary = Double.MAX_VALUE;
+        for (Employee employee : employees) {
+            if (employee != null && employee.getSalary() < minSalary) {
+                minSalary = employee.getSalary();
+                minSalaryEmployee = employee;
+            }
+        }
+        return minSalaryEmployee;
+    }
+
+
+    public static Employee findEmployeeWithMaxSalary() {
+        Employee maxSalaryEmployee = null;
+        double maxSalary = Double.MIN_VALUE;
+        for (Employee employee : employees) {
+            if (employee != null && employee.getSalary() > maxSalary) {
+                maxSalary = employee.getSalary();
+                maxSalaryEmployee = employee;
+            }
+        }
+        return maxSalaryEmployee;
+    }
+
+
+    public static double calculateAverageSalary() {
+        int count = 0;
+        double total = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                total += employee.getSalary();
+                count++;
+            }
+        }
+        return count > 0 ? total / count : 0;
+    }
+
+
+    public static void printAllFullNames() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee.getFullName());
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
