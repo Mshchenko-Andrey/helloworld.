@@ -9,7 +9,6 @@ public class Main {
         employees[2] = new Employee("Каноненко Дмитрий Андреевич", 3, 90000);
 
 
-
         printAllEmployees();
         System.out.println("Сумма затрат на ЗП: " + calculateTotalSalary());
         System.out.println("Сотрудник с минимальной ЗП: " + findEmployeeWithMinSalary());
@@ -26,13 +25,6 @@ public class Main {
             }
         }
     }
-
-        book1.setYear(1997);
-        System.out.println("Обновленный год публикации книги 1: " + book1.getYear());
-    }
-}
-
-
 
 
     public static double calculateTotalSalary() {
@@ -70,6 +62,28 @@ public class Main {
         }
         return maxSalaryEmployee;
     }
+
+    public static double calculateAverageSalary() {
+        int count = 0;
+        double total = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                total += employee.getSalary();
+                count++;
+            }
+        }
+        return count > 0 ? total / count : 0;
+    }
+
+    public static void printAllFullNames() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee.getFullName());
+            }
+        }
+    }
+}
+
 
 
 
