@@ -72,24 +72,4 @@ public class Main {
     }
 
 
-    public static double calculateAverageSalary() {
-        int count = 0;
-        double total = 0;
-        for (Employee employee : employees) {
-            if (employee != null) {
-                total += employee.getSalary();
-                count++;
-            }
-        }
-        return count > 0 ? total / count : 0;
-    }
 
-
-    public static void printAllFullNames() {
-        for (Employee employee : employees) {
-            if (employee != null) {
-                System.out.println(employee.getFullName());
-            }
-        }
-    }
-}
